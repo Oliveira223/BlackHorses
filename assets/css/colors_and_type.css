@@ -1,0 +1,239 @@
+/* ============================================================
+   BLACK HORSES ARTES MARCIAIS — Design Tokens
+   colors_and_type.css
+   ============================================================ */
+
+/* ----------  Fonts  ---------------------------------------- */
+
+@font-face {
+  font-family: 'BHBrand';
+  src: url('fonts/handelsonsix_cyr_six.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BebasNeue';
+  src: url('fonts/BebasNeue-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-VariableFont.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-VariableFont.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('fonts/Nunito-VariableFont.ttf') format('truetype');
+  font-weight: 200 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KaushanScript';
+  src: url('fonts/KaushanScript-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* ----------  Color Tokens  --------------------------------- */
+
+:root {
+  color-scheme: dark only;
+
+  /* --- Base Palette --- */
+  --bh-black:          #161616;
+  --bh-dark:           #191a1d;
+  --bh-surface:        rgba(61, 61, 61, 0.80);
+  --bh-overlay-menu:   #616161;
+  --bh-accent:         #c5db00;     /* lime-yellow: plan badges, key highlights */
+  --bh-accent-dark:    #a8bc00;     /* hover/pressed accent */
+  --bh-green:          #1fc55c;     /* WhatsApp CTA */
+  --bh-green-hover:    #075e54;     /* WhatsApp hover */
+  --bh-white:          #ffffff;
+  --bh-white-soft:     rgba(255, 255, 255, 0.91);
+
+  /* --- Text --- */
+  --bh-text-primary:   #dddbdb;
+  --bh-text-secondary: #b8b6b6;
+  --bh-text-muted:     #808080;
+  --bh-text-on-accent: #1d1d1d;     /* text on lime-yellow bg */
+
+  /* --- Semantic Aliases --- */
+  --color-bg:              var(--bh-black);
+  --color-surface:         var(--bh-surface);
+  --color-footer:          var(--bh-dark);
+  --color-accent:          var(--bh-accent);
+  --color-cta:             var(--bh-green);
+  --color-cta-hover:       var(--bh-green-hover);
+  --color-text:            var(--bh-text-primary);
+  --color-text-sub:        var(--bh-text-secondary);
+  --color-text-muted:      var(--bh-text-muted);
+  --color-border:          rgba(255, 255, 255, 0.15);
+
+  /* ----------  Typography Tokens  -------------------------- */
+
+  /* Families */
+  --font-brand:    'BHBrand', sans-serif;       /* handelsonsix — logo & section titles */
+  --font-display:  'BebasNeue', sans-serif;     /* condensed display — section labels */
+  --font-body:     'Inter', sans-serif;         /* body, nav, UI */
+  --font-ui:       'Roboto', sans-serif;        /* buttons, price text */
+  --font-price:    'Nunito', sans-serif;        /* plan prices, info */
+  --font-script:   'KaushanScript', cursive;   /* decorative accent (rare) */
+
+  /* Scale (desktop, vw-based mirroring the site) */
+  --text-hero:     clamp(2.5rem, 5vw, 5rem);    /* brand name in header */
+  --text-sub:      clamp(1rem, 2vw, 2rem);       /* "Artes Marciais" subtitle */
+  --text-section:  clamp(2rem, 6vw, 5rem);       /* section h2 titles */
+  --text-card:     clamp(1.5rem, 3vw, 3rem);     /* plan card titles */
+  --text-body:     clamp(0.9rem, 1.5vw, 1.5rem); /* body paragraphs */
+  --text-nav:      clamp(0.8rem, 1.8vw, 1.8rem); /* nav links */
+  --text-label:    clamp(0.7rem, 1vw, 1rem);     /* labels, muted */
+  --text-price:    clamp(1.2rem, 2vw, 2.5rem);   /* prices */
+
+  /* ----------  Spacing Tokens  ----------------------------- */
+  --space-xs:   4px;
+  --space-sm:   8px;
+  --space-md:   16px;
+  --space-lg:   24px;
+  --space-xl:   40px;
+  --space-2xl:  64px;
+  --space-section: clamp(2rem, 5vw, 5rem);
+
+  /* ----------  Border Radius  ------------------------------ */
+  --radius-pill:   9999px;
+  --radius-card:   clamp(16px, 4vw, 40px);
+  --radius-image:  10%;
+  --radius-sm:     8px;
+  --radius-md:     12px;
+
+  /* ----------  Shadows  ------------------------------------ */
+  --shadow-card:     10px 10px 20px rgba(2, 2, 0, 0.95);
+  --shadow-float:    15px 18px 20px rgba(0, 0, 0, 0.50);
+  --shadow-image:    8px 8px 10px rgba(0, 0, 0, 0.60);
+  --shadow-glow-sm:  0 0 12px rgba(255, 255, 255, 0.10);
+
+  /* ----------  Transitions  -------------------------------- */
+  --transition-fast:   0.3s ease;
+  --transition-medium: 0.5s ease;
+  --transition-reveal: 0.8s ease;
+}
+
+/* ----------  Base HTML element styles  --------------------- */
+
+body {
+  background-color: var(--color-bg);
+  background-image: url('assets/background_redux.png');
+  background-repeat: repeat-y;
+  background-size: 100%;
+  background-position: center;
+  color: var(--color-text);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: var(--font-brand);
+  font-size: var(--text-hero);
+  color: var(--bh-white-soft);
+  letter-spacing: 0.01em;
+}
+
+h2 {
+  font-family: var(--font-brand);
+  font-size: var(--text-section);
+  color: var(--bh-text-primary);
+  letter-spacing: 0.02em;
+  text-shadow: 0.4vw 0.4vw 1vw rgba(0, 0, 0, 0.80);
+}
+
+h3 {
+  font-family: var(--font-body);
+  font-size: var(--text-price);
+  color: var(--bh-text-primary);
+  font-weight: 600;
+}
+
+p {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  color: var(--bh-text-primary);
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+a:hover {
+  color: var(--bh-white);
+}
+
+/* ----------  Utility Classes  ------------------------------ */
+
+.bh-surface {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-card);
+}
+
+.bh-badge {
+  background-color: var(--color-accent);
+  color: var(--bh-text-on-accent);
+  font-family: var(--font-brand);
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4em 1.5em;
+}
+
+.bh-btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75em;
+  background-color: var(--color-cta);
+  color: var(--bh-white);
+  font-family: var(--font-ui);
+  font-weight: 500;
+  border-radius: var(--radius-pill);
+  padding: 0.75em 2em;
+  box-shadow: var(--shadow-float);
+  transition: background-color var(--transition-medium);
+  cursor: pointer;
+  border: none;
+}
+
+.bh-btn-cta:hover {
+  background-color: var(--color-cta-hover);
+}
+
+.bh-btn-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(-45deg, #000, #0a0a0a, #000);
+  color: var(--bh-white);
+  font-family: var(--font-body);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-float);
+  padding: 0.7em 2em;
+  cursor: pointer;
+  transition: filter var(--transition-fast);
+}
+
+.bh-btn-dark:hover {
+  filter: brightness(1.25);
+}

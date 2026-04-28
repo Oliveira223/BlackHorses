@@ -1,0 +1,12 @@
+# GitHub Pages Configuration
+title: Black Horses Artes Marciais
+description: Academia de artes marciais em Porto Alegre - Boxe, Muay Thai e Hapkido
+baseurl: /BlackHorses
+url: https://Oliveira223.github.io
+theme: jekyll-theme-midnight
+markdown: kramdown
+encoding: UTF-8
+
+# Head customization
+author: Black Horses Artes Marciais
+author_email: blackhorsesartesmarciais@gmail.com

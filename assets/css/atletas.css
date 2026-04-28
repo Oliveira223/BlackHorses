@@ -1,0 +1,129 @@
+/* ── Athletes grid ─────────────────────────────────────── */
+#atletas-section { padding:clamp(48px,7vw,88px) clamp(20px,5vw,60px); }
+#atletas-section .header { margin-bottom:clamp(28px,4vw,52px); }
+
+.atletas-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(clamp(150px,20vw,220px),1fr));
+  gap:3px;
+}
+
+.atleta-card {
+  background:#111;
+  border:1px solid var(--border);
+  overflow:hidden;
+  position:relative;
+  cursor:pointer;
+  transition:transform .3s ease;
+}
+.atleta-card:hover { transform:translateY(-4px); }
+.atleta-card:hover .atleta-photo { transform:scale(1.06); }
+
+.atleta-photo-wrap {
+  aspect-ratio:1/1; overflow:hidden;
+  position:relative;
+}
+.atleta-photo {
+  width:100%; height:100%;
+  object-fit:cover; object-position:center top;
+  transition:transform .5s ease;
+}
+.atleta-photo-overlay {
+  position:absolute; inset:0;
+  background:linear-gradient(to top, rgba(0,0,0,.7) 0%, transparent 55%);
+}
+
+.atleta-info {
+  padding:clamp(12px,1.5vw,20px);
+  border-top:1px solid var(--border);
+}
+.atleta-name {
+  font-family:'BHBrand',sans-serif;
+  font-size:clamp(18px,2vw,26px);
+  color:#fff; margin-bottom:10px;
+}
+.atleta-belts {
+  display:flex; gap:4px; align-items:center; margin-bottom:8px;
+  flex-wrap:wrap;
+}
+.atleta-belt {
+  height:clamp(14px,1.6vw,20px); width:auto;
+}
+.atleta-medals {
+  display:flex; gap:4px; align-items:center;
+}
+.atleta-medal {
+  width:clamp(16px,1.8vw,22px); height:auto;
+}
+/* accent corner dot */
+.atleta-card::after {
+  content:''; position:absolute; top:12px; right:12px;
+  width:7px; height:7px; border-radius:50%;
+  background:var(--accent);
+}
+
+/* ── Team photo ────────────────────────────────────────── */
+.team-photo-wrap {
+  width:clamp(280px,65%,760px);
+  margin:0 auto clamp(40px,6vw,72px);
+  border-radius:clamp(8px,1.5vw,16px);
+  overflow:hidden;
+  box-shadow:0 20px 60px rgba(0,0,0,.7);
+}
+.team-photo-wrap img { width:100%; height:auto; display:block; }
+
+/* ── Competition photos ────────────────────────────────── */
+#comp-section { padding:0 clamp(20px,5vw,60px) clamp(60px,8vw,100px); }
+#comp-section .header { margin-bottom:clamp(28px,4vw,52px); }
+
+.comp-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:3px;
+}
+.comp-photo {
+  position:relative; overflow:hidden;
+  aspect-ratio:4/3; cursor:pointer;
+}
+.comp-photo img {
+  width:100%; height:100%; object-fit:cover;
+  transition:transform .5s ease;
+}
+.comp-photo:hover img { transform:scale(1.04); }
+.comp-photo::after {
+  content:''; position:absolute; inset:0;
+  background:rgba(0,0,0,.25);
+  transition:background .3s;
+}
+.comp-photo:hover::after { background:rgba(0,0,0,.1); }
+
+/* ── Lightbox ──────────────────────────────────────────── */
+#lightbox {
+  display:none; position:fixed; inset:0;
+  background:rgba(0,0,0,.92); z-index:2000;
+  align-items:center; justify-content:center;
+}
+#lightbox.open { display:flex; }
+#lightbox img { max-width:90vw; max-height:88vh; object-fit:contain; border-radius:8px; }
+#lightbox-close {
+  position:absolute; top:20px; right:28px;
+  font-size:28px; color:#fff; cursor:pointer;
+  background:none; border:none; font-family:'Inter',sans-serif;
+  line-height:1;
+}
+#lightbox-prev, #lightbox-next {
+  position:absolute; top:50%; transform:translateY(-50%);
+  background:rgba(255,255,255,.08); border:none; color:#fff;
+  font-size:24px; cursor:pointer; padding:16px 20px; border-radius:4px;
+  transition:background .2s;
+}
+#lightbox-prev:hover, #lightbox-next:hover { background:rgba(255,255,255,.15); }
+#lightbox-prev { left:20px; }
+#lightbox-next { right:20px; }
+
+@media (max-width:768px) {
+  .atletas-grid { grid-template-columns:repeat(2,1fr); }
+  .comp-grid    { grid-template-columns:1fr; }
+  #lightbox-prev { left:8px; padding:12px 14px; }
+  #lightbox-next { right:8px; padding:12px 14px; }
+}
