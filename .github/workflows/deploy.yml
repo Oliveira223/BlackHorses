@@ -18,6 +18,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             echo "[INFO] Atualizando site..."
+            find ~/BlackHorses/.git -not -user black-horses -exec chown black-horses:black-horses {} + 2>/dev/null || true
             cd ~/BlackHorses
             git fetch origin
             git reset --hard origin/main
