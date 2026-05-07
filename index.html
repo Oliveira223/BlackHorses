@@ -5,19 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0e0e0e">
   <meta name="color-scheme" content="dark">
-  <link rel="icon" href="assets/images/logos/logo_transparent.png" type="image/png">
+  <link rel="icon" href="assets/images/bhicon.png" type="image/png">
   <meta name="description" content="Academia de artes marciais em Porto Alegre. Boxe, Muay Thai e Hapkido para todos os níveis. Agende uma aula experimental gratuita.">
   <title>Black Horses — Artes Marciais</title>
-  <link rel="stylesheet" href="assets/css/bh-style.css">
   <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
-  <script src="assets/components/nav.js"></script>
 
   <!-- ══ LOADING ══════════════════════════════════════════════ -->
   <div id="bh-loading">
-    <img src="assets/images/logos/logo_redux_transparent.webp" alt="" class="load-icon">
+    <img src="assets/images/bhicon.png" alt="" class="load-icon">
     <div class="load-bar"><div class="load-bar-fill"></div></div>
+  </div>
+
+  <!-- ══ NAV ══════════════════════════════════════════════════ -->
+  <nav id="nav">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-name">Black Horses</div>
+      <div class="nav-logo-sub">Artes Marciais</div>
+    </a>
+    <div class="nav-links">
+      <a href="sobre.html">Quem Somos</a>
+      <a href="espacos.html">Espaços</a>
+      <a href="atletas.html">Atletas</a>
+      <a href="#planos">Planos</a>
+      <a href="#horarios">Horários</a>
+      <a href="https://wa.me/5551982005084" target="_blank" class="nav-cta">Aula Experimental</a>
+    </div>
+    <button id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ══ MOBILE MENU ═══════════════════════════════════════════ -->
+  <div id="mobile-menu">
+    <a href="sobre.html">Quem Somos</a>
+    <a href="espacos.html">Espaços</a>
+    <a href="atletas.html">Atletas</a>
+    <a href="#planos">Planos</a>
+    <a href="#horarios">Horários</a>
+    <a href="https://wa.me/5551982005084" target="_blank" class="mob-cta">Aula Experimental</a>
   </div>
 
   <!-- ══ HERO ══════════════════════════════════════════════════ -->
@@ -49,16 +76,14 @@
       <div class="ticker-item"><span class="ticker-word accent">MUAY THAI</span><span class="ticker-dot">◆</span></div>
       <div class="ticker-item"><span class="ticker-word white">HAPKIDO</span><span class="ticker-dot">◆</span></div>
       <div class="ticker-item"><span class="ticker-word accent">DEFESA PESSOAL</span><span class="ticker-dot">◆</span></div>
-      <div class="ticker-item"><span class="ticker-word white">KIDS &amp; TEENS</span><span class="ticker-dot">◆</span></div>
-      <div class="ticker-item"><span class="ticker-word accent">PORTO ALEGRE</span><span class="ticker-dot">◆</span></div>
-      <div class="ticker-item"><span class="ticker-word white">DESDE 2019</span><span class="ticker-dot">◆</span></div>
+      <div class="ticker-item"><span class="ticker-word white">PORTO ALEGRE</span><span class="ticker-dot">◆</span></div>
+      <div class="ticker-item"><span class="ticker-word accent">DESDE 2019</span><span class="ticker-dot">◆</span></div>
       <div class="ticker-item"><span class="ticker-word white">BOXE</span><span class="ticker-dot">◆</span></div>
       <div class="ticker-item"><span class="ticker-word accent">MUAY THAI</span><span class="ticker-dot">◆</span></div>
       <div class="ticker-item"><span class="ticker-word white">HAPKIDO</span><span class="ticker-dot">◆</span></div>
       <div class="ticker-item"><span class="ticker-word accent">DEFESA PESSOAL</span><span class="ticker-dot">◆</span></div>
-      <div class="ticker-item"><span class="ticker-word white">KIDS &amp; TEENS</span><span class="ticker-dot">◆</span></div>
-      <div class="ticker-item"><span class="ticker-word accent">PORTO ALEGRE</span><span class="ticker-dot">◆</span></div>
-      <div class="ticker-item"><span class="ticker-word white">DESDE 2019</span><span class="ticker-dot">◆</span></div>
+      <div class="ticker-item"><span class="ticker-word white">PORTO ALEGRE</span><span class="ticker-dot">◆</span></div>
+      <div class="ticker-item"><span class="ticker-word accent">DESDE 2019</span><span class="ticker-dot">◆</span></div>
     </div>
   </div>
 
@@ -264,10 +289,18 @@
   </section>
 
   <!-- ══ FOOTER ════════════════════════════════════════════════ -->
+  <footer id="footer">
+    <div>
+      <div class="footer-brand-name">Black Horses</div>
+      <div class="footer-brand-sub">ARTES MARCIAIS</div>
+      <p class="footer-addr">R. Cel. Aristídes, 180 - Cristal · Porto Alegre/RS</p>
+    </div>
+    <img src="assets/images/bhicon_transparent.webp" alt="Black Horses" class="footer-logo">
+    <p class="footer-copy">&copy; 2025 Black Horses Artes Marciais. Todos os direitos reservados.</p>
+  </footer>
 
 
   <script src="assets/js/bh-app.js"></script>
   <script src="assets/js/index.js"></script>
-  <script src="assets/components/footer.js"></script>
 </body>
 </html>
