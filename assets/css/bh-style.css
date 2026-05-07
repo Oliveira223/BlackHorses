@@ -49,9 +49,8 @@ body::before {
 
 .load-icon {
   width:72px; height:72px;
-  animation:loadSpin 2s linear infinite, loadPulse 2s ease-in-out infinite;
+  animation:loadPulse 2s ease-in-out infinite;
 }
-@keyframes loadSpin  { to { transform:rotate(360deg); } }
 @keyframes loadPulse {
   0%,100% { filter:drop-shadow(0 0 4px rgba(197,219,0,0.3)); }
   50%     { filter:drop-shadow(0 0 18px rgba(197,219,0,0.8)); }
@@ -180,7 +179,7 @@ body::before {
 .footer-brand-name { font-family:'BHBrand',sans-serif; font-size:22px; color:#fff; }
 .footer-brand-sub  { font-family:'Inter',sans-serif; font-size:10px; color:var(--accent); letter-spacing:.4em; margin-top:2px; }
 .footer-addr       { font-family:'Inter',sans-serif; font-size:12px; color:#333; margin-top:10px; }
-.footer-logo       { width:52px; opacity:.65; }
+.footer-logo       { width:84px; opacity:.85; }
 .footer-copy       { width:100%; text-align:center; font-family:'Inter',sans-serif; font-size:11px; color:#2a2a2a; border-top:1px solid #111; padding-top:18px; margin-top:6px; }
 
 /* ══════════════ ANIMATIONS ═══════════════════════════════════ */

@@ -76,9 +76,34 @@
 #comp-section { padding:0 clamp(20px,5vw,60px) clamp(60px,8vw,100px); }
 #comp-section .header { margin-bottom:clamp(28px,4vw,52px); }
 
+.comp-group { margin-bottom:clamp(40px,6vw,72px); }
+.comp-group:last-child { margin-bottom:0; }
+
+.comp-group-title {
+  font-family:'BebasNeue',sans-serif;
+  font-size:clamp(22px,2.8vw,34px);
+  color:#fff;
+  letter-spacing:.1em;
+  margin-bottom:clamp(14px,2vw,22px);
+  padding-left:14px;
+  border-left:4px solid var(--accent);
+}
+
+.comp-empty {
+  grid-column:1 / -1;
+  padding:clamp(32px,4vw,52px);
+  text-align:center;
+  font-family:'Inter',sans-serif;
+  font-size:12px;
+  color:#2a2a2a;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  border:1px solid #1a1a1a;
+}
+
 .comp-grid {
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:repeat(3,1fr);
   gap:3px;
 }
 .comp-photo {
@@ -96,6 +121,40 @@
   transition:background .3s;
 }
 .comp-photo:hover::after { background:rgba(0,0,0,.1); }
+
+.comp-collapse {
+  position:relative;
+  max-height:320px;
+  overflow:hidden;
+}
+.comp-collapse.expanded {
+  max-height:none;
+}
+.comp-fade {
+  position:absolute;
+  bottom:0; left:0; right:0;
+  height:140px;
+  background:linear-gradient(to bottom, transparent, #0e0e0e);
+  pointer-events:none;
+  transition:opacity .3s ease;
+}
+.comp-collapse.expanded .comp-fade {
+  opacity:0;
+}
+.comp-ver-mais {
+  display:block;
+  margin:14px 0 0;
+  background:none; border:none;
+  font-family:'Inter',sans-serif;
+  font-size:11px; font-weight:700;
+  color:var(--accent);
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  cursor:pointer;
+  padding:6px 0;
+  transition:opacity .2s;
+}
+.comp-ver-mais:hover { opacity:.7; }
 
 /* ── Lightbox ──────────────────────────────────────────── */
 #lightbox {
@@ -123,7 +182,7 @@
 
 @media (max-width:768px) {
   .atletas-grid { grid-template-columns:repeat(2,1fr); }
-  .comp-grid    { grid-template-columns:1fr; }
+  .comp-grid    { grid-template-columns:repeat(2,1fr); }
   #lightbox-prev { left:8px; padding:12px 14px; }
   #lightbox-next { right:8px; padding:12px 14px; }
 }

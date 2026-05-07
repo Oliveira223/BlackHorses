@@ -1,45 +1,22 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="dark">
-  <link rel="icon" href="assets/images/bhicon.png" type="image/png">
+  <link rel="icon" href="assets/images/logos/logo_redux_transparent.png" type="image/png">
   <meta name="description" content="Atletas e conquistas da Black Horses. Competidores de alto nível em Boxe, Muay Thai e Hapkido em Porto Alegre.">
   <title>Atletas — Black Horses</title>
   <link rel="stylesheet" href="assets/css/bh-style.css">
   <link rel="stylesheet" href="assets/css/atletas.css">
 </head>
 <body>
+  <script src="assets/components/nav.js"></script>
 
   <!-- Loading -->
   <div id="bh-loading">
-    <img src="assets/images/bhicon.png" alt="" class="load-icon">
+    <img src="assets/images/logos/logo_redux_transparent.png" alt="" class="load-icon">
     <div class="load-bar"><div class="load-bar-fill"></div></div>
-  </div>
-
-  <!-- Nav -->
-  <nav id="nav">
-    <a href="index.html" class="nav-logo">
-      <div class="nav-logo-name">Black Horses</div>
-      <div class="nav-logo-sub">Artes Marciais</div>
-    </a>
-    <div class="nav-links">
-      <a href="sobre.html">Quem Somos</a>
-      <a href="espacos.html">Espaços</a>
-      <a href="atletas.html" class="active">Atletas</a>
-      <a href="index.html#planos">Planos</a>
-      <a href="https://wa.me/5551999894785" target="_blank" class="nav-cta">Aula Experimental</a>
-    </div>
-    <button id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
-  </nav>
-  <div id="mobile-menu">
-    <a href="index.html">Home</a>
-    <a href="sobre.html">Quem Somos</a>
-    <a href="espacos.html">Espaços</a>
-    <a href="atletas.html">Atletas</a>
-    <a href="index.html#planos">Planos</a>
-    <a href="https://wa.me/5551999894785" target="_blank" class="mob-cta">Aula Experimental</a>
   </div>
 
   <!-- Hero -->
@@ -142,6 +119,20 @@
         </div>
       </div>
 
+      <div class="atleta-card reveal">
+        <div class="atleta-photo-wrap">
+          <img class="atleta-photo" src="assets/images/atletas/portraits/Otavio_3_4.jpeg" alt="Otavio Bresolin">
+          <div class="atleta-photo-overlay"></div>
+        </div>
+        <div class="atleta-info">
+          <div class="atleta-name">Otavio Bresolin</div>
+          <div class="atleta-belts"></div>
+          <div class="atleta-medals">
+            <img class="atleta-medal" src="assets/icons/icons8-medal-100.png" alt="medalha">
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -151,12 +142,39 @@
       <div class="section-eyebrow">Na arena</div>
       <h2 class="section-title">Competições</h2>
     </div>
-    <div class="comp-grid" id="comp-grid">
-      <div class="comp-photo reveal" data-idx="0"><img src="assets/images/atletas/comp/UCS12167.webp" alt="Competição"></div>
-      <div class="comp-photo reveal" data-idx="1"><img src="assets/images/atletas/comp/UCS12252.webp" alt="Competição"></div>
-      <div class="comp-photo reveal" data-idx="2"><img src="assets/images/atletas/comp/UCS19561.webp" alt="Competição"></div>
-      <div class="comp-photo reveal" data-idx="3"><img src="assets/images/atletas/comp/UCS19634.webp" alt="Competição"></div>
+
+    <div class="comp-group">
+      <div class="comp-group-title reveal">Treinos</div>
+      <div class="comp-collapse">
+        <div class="comp-grid">
+          <div class="comp-photo reveal"><img src="assets/images/atletas/comp/UCS12167.webp" alt="Treino"></div>
+          <div class="comp-photo reveal"><img src="assets/images/atletas/comp/UCS12252.webp" alt="Treino"></div>
+          <div class="comp-photo reveal"><img src="assets/images/atletas/comp/UCS19561.webp" alt="Treino"></div>
+          <div class="comp-photo reveal"><img src="assets/images/atletas/comp/UCS19634.webp" alt="Treino"></div>
+        </div>
+        <div class="comp-fade"></div>
+      </div>
+      <button class="comp-ver-mais">Ver mais fotos ↓</button>
     </div>
+
+    <div class="comp-group">
+      <div class="comp-group-title reveal">Copa Predadores 2026</div>
+      <div class="comp-collapse">
+        <div class="comp-grid">
+          <div class="comp-photo reveal"><img src="assets/images/atletas/comp/copa_predadora_2026/WhatsApp Image 2026-05-06 at 21.16.41.jpeg" alt="Copa Predadores 2026"></div>
+          <div class="comp-photo reveal"><img src="assets/images/atletas/comp/copa_predadora_2026/WhatsApp Image 2026-05-06 at 21.16.42.jpeg" alt="Copa Predadores 2026"></div>
+          <div class="comp-photo reveal"><img src="assets/images/atletas/comp/copa_predadora_2026/WhatsApp Image 2026-05-06 at 21.16.42 (1).jpeg" alt="Copa Predadores 2026"></div>
+          <div class="comp-photo reveal"><img src="assets/images/atletas/comp/copa_predadora_2026/WhatsApp Image 2026-05-06 at 21.16.42 (2).jpeg" alt="Copa Predadores 2026"></div>
+          <div class="comp-photo reveal"><img src="assets/images/atletas/comp/copa_predadora_2026/WhatsApp Image 2026-05-06 at 21.16.42 (3).jpeg" alt="Copa Predadores 2026"></div>
+          <div class="comp-photo reveal"><img src="assets/images/atletas/comp/copa_predadora_2026/WhatsApp Image 2026-05-06 at 21.16.43.jpeg" alt="Copa Predadores 2026"></div>
+          <div class="comp-photo reveal"><img src="assets/images/atletas/comp/copa_predadora_2026/WhatsApp Image 2026-05-06 at 21.16.43 (1).jpeg" alt="Copa Predadores 2026"></div>
+          <div class="comp-photo reveal"><img src="assets/images/atletas/comp/copa_predadora_2026/WhatsApp Image 2026-05-06 at 21.16.43 (2).jpeg" alt="Copa Predadores 2026"></div>
+        </div>
+        <div class="comp-fade"></div>
+      </div>
+      <button class="comp-ver-mais">Ver mais fotos ↓</button>
+    </div>
+
   </section>
 
   <!-- Lightbox -->
@@ -168,17 +186,9 @@
   </div>
 
   <!-- Footer -->
-  <footer id="footer">
-    <div>
-      <div class="footer-brand-name">Black Horses</div>
-      <div class="footer-brand-sub">ARTES MARCIAIS</div>
-      <p class="footer-addr">R. Cel. Aristídes, 180 - Cristal · Porto Alegre/RS</p>
-    </div>
-    <img src="assets/images/bhicon_transparent.webp" alt="Black Horses" class="footer-logo">
-    <p class="footer-copy">&copy; 2025 Black Horses Artes Marciais. Todos os direitos reservados.</p>
-  </footer>
 
   <script src="assets/js/bh-app.js"></script>
   <script src="assets/js/atletas.js"></script>
+  <script src="assets/components/footer.js"></script>
 </body>
 </html>
