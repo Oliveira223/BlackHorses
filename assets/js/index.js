@@ -3,19 +3,22 @@
   const track = document.querySelector('.ticker-track');
   if (!track) return;
 
-  // Kill CSS animation — JS drives it
   track.style.animation = 'none';
 
   const origItems = Array.from(track.children);
 
-  // Clone enough to fill several viewport widths
-  for (let i = 0; i < 6; i++) {
-    origItems.forEach(item => track.appendChild(item.cloneNode(true)));
-  }
-
-  // Measure after fonts settle (document.fonts.ready or fallback timeout)
   function start() {
-    const setWidth = track.scrollWidth / 7; // 7 total copies (original + 6 clones)
+    // Mede a largura de um set ANTES de clonar, com a fonte já renderizada
+    const setWidth = origItems.reduce((sum, el) => sum + el.offsetWidth, 0);
+
+    if (setWidth === 0) { setTimeout(start, 100); return; }
+
+    // Clona o suficiente para cobrir 4× a tela
+    const copies = Math.ceil((window.innerWidth * 4) / setWidth) + 1;
+    for (let i = 0; i < copies; i++) {
+      origItems.forEach(item => track.appendChild(item.cloneNode(true)));
+    }
+
     let pos = 0;
     let prev = null;
     const SPEED = 60; // px/s
