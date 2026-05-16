@@ -237,5 +237,9 @@ body::before {
   .cta-sub { display:none; }
   .cta-links { align-items:stretch; width:100%; }
   .cta-btn-wpp, .cta-btn-ig { justify-content:center; }
-  .footer-logo { align-self:center; }
+  /* Footer: stack and center on mobile */
+  #footer { flex-direction:column; align-items:center; text-align:center; }
+  #footer > div { text-align:center; }
+  .footer-logo { align-self:center; margin:12px 0; }
+  .footer-copy { width:100%; }
 }
