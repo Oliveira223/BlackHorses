@@ -170,6 +170,43 @@ body::before {
   display:block; margin:clamp(20px,4vw,48px) auto;
 }
 
+/* ══════════════ CTA BAND ═════════════════════════════════════ */
+#cta-band {
+  background:var(--accent);
+  padding:clamp(48px,7vw,88px) clamp(20px,5vw,60px);
+  display:flex; align-items:center; justify-content:space-between;
+  gap:24px; flex-wrap:wrap;
+}
+.cta-heading {
+  font-family:'BHBrand',sans-serif;
+  font-size:clamp(36px,6vw,80px);
+  color:#0a0a0a; line-height:.9; letter-spacing:-.01em;
+}
+.cta-sub {
+  font-family:'Inter',sans-serif;
+  font-size:clamp(13px,1.1vw,15px);
+  color:rgba(0,0,0,.55); margin-top:12px; max-width:360px;
+}
+.cta-links { display:flex; flex-direction:column; gap:12px; align-items:flex-start; }
+.cta-btn-wpp {
+  display:inline-flex; align-items:center; gap:10px;
+  background:#0a0a0a; color:#fff;
+  font-family:'Inter',sans-serif; font-size:14px; font-weight:700;
+  border-radius:9999px; padding:14px 32px; letter-spacing:.05em;
+  transition:opacity .2s;
+}
+.cta-btn-wpp:hover { opacity:.85; }
+.cta-btn-wpp img { width:20px; filter:brightness(0) invert(1); }
+.cta-btn-ig {
+  display:inline-flex; align-items:center; gap:10px;
+  background:transparent; color:#0a0a0a;
+  font-family:'Inter',sans-serif; font-size:14px; font-weight:700;
+  border-radius:9999px; padding:13px 32px; letter-spacing:.05em;
+  border:1.5px solid #0a0a0a; transition:opacity .2s;
+}
+.cta-btn-ig:hover { opacity:.7; }
+.cta-btn-ig img { width:20px; }
+
 /* ══════════════ FOOTER ═══════════════════════════════════════ */
 #footer {
   background:#070707; padding:clamp(28px,4vw,48px) clamp(20px,5vw,60px);
@@ -195,4 +232,5 @@ body::before {
   #nav.scrolled { padding:10px 20px; }
   .nav-links { display:none; }
   #hamburger { display:flex; }
+  #cta-band { flex-direction:column; }
 }

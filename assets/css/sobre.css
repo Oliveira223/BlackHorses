@@ -90,27 +90,7 @@
 }
 .mod-chip:hover { opacity:.85; }
 
-/* ── CTA band ────────────────────────────────────────────── */
-#cta-section {
-  padding:clamp(48px,6vw,80px) clamp(20px,5vw,60px);
-  display:flex; align-items:center; justify-content:space-between;
-  gap:24px; flex-wrap:wrap;
-  background:var(--accent);
-}
-.cta-heading { font-family:'BHBrand',sans-serif; font-size:clamp(36px,5vw,72px); color:#0a0a0a; line-height:.92; }
-.cta-sub { font-family:'Inter',sans-serif; font-size:clamp(13px,1.1vw,15px); color:rgba(0,0,0,.5); margin-top:10px; max-width:340px; }
-.cta-wpp {
-  display:inline-flex; align-items:center; gap:10px;
-  background:#0a0a0a; color:#fff;
-  font-family:'Inter',sans-serif; font-size:14px; font-weight:700;
-  border-radius:9999px; padding:14px 32px; letter-spacing:.05em;
-  transition:opacity .2s;
-}
-.cta-wpp:hover { opacity:.85; }
-.cta-wpp img { width:20px; filter:brightness(0) invert(1); }
-
 @media (max-width:768px) {
   .historia-grid { grid-template-columns:1fr; }
   .stats-grid    { grid-template-columns:repeat(2,1fr); }
-  #cta-section   { flex-direction:column; }
 }

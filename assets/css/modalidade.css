@@ -150,38 +150,7 @@
 }
 .outra-mod-link:hover::after { opacity:.8; }
 
-/* ── CTA ─────────────────────────────────────────────────── */
-#mod-cta {
-  background:var(--accent);
-  padding:clamp(48px,7vw,88px) clamp(20px,5vw,60px);
-  display:flex; align-items:center; justify-content:space-between;
-  gap:24px; flex-wrap:wrap;
-}
-.mod-cta-heading {
-  font-family:'BHBrand',sans-serif;
-  font-size:clamp(36px,5vw,72px);
-  color:#0a0a0a;
-  line-height:.92;
-}
-.mod-cta-sub {
-  font-family:'Inter',sans-serif;
-  font-size:clamp(13px,1.1vw,15px);
-  color:rgba(0,0,0,.55);
-  margin-top:10px;
-  max-width:340px;
-}
-.mod-cta-wpp {
-  display:inline-flex; align-items:center; gap:10px;
-  background:#0a0a0a; color:#fff;
-  font-family:'Inter',sans-serif; font-size:14px; font-weight:700;
-  border-radius:9999px; padding:14px 32px; letter-spacing:.05em;
-  transition:opacity .2s;
-}
-.mod-cta-wpp:hover { opacity:.85; }
-.mod-cta-wpp img { width:20px; filter:brightness(0) invert(1); }
-
 /* ── Responsive ──────────────────────────────────────────── */
 @media (max-width:768px) {
   .tecnicas-grid { grid-template-columns:1fr; }
-  #mod-cta { flex-direction:column; }
 }
