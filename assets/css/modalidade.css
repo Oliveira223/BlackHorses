@@ -152,5 +152,8 @@
 
 /* ── Responsive ──────────────────────────────────────────── */
 @media (max-width:768px) {
-  .tecnicas-grid { grid-template-columns:1fr; }
+  .tecnicas-col-title { padding:12px 14px 8px; font-size:9px; letter-spacing:.3em; }
+  .tecnica-item { padding:14px 12px; }
+  .tecnica-name { font-size:clamp(15px,4.5vw,20px); }
+  .tecnica-desc { font-size:11px; padding-left:12px; }
 }
