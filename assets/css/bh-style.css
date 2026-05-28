@@ -135,9 +135,25 @@ body::before {
   position:relative; height:clamp(200px,32vw,420px); overflow:hidden;
   margin-top:0;
 }
-.page-hero img {
+.page-hero-lqip {
+  position:absolute; inset:0;
+  background-image:url('data:image/webp;base64,UklGRlABAABXRUJQVlA4IEQBAACQBgCdASoeABQAPpE+mEilo6IhMBgIALASCWMAsR7p1gCuYUzPt+ZH1bsiNo/sOAQYP8dg9SIZTWo+rlzAAP7y1WnN6BPp2oXWvlDkFtfwhtcq59nQllUwrnxCMMnJu5FYWZq9gO+pgfWkMShwzqO26fZvXE8/lC60UAkuxQxMD5K8jbyLpuvS4maIEq55QI7lBJWBiazDSp6SwRtVePQnK7xms9AnQ94TfgJaGGotwzIR1fMvYxTcl4Kt4rReJNzLOxblY4f1Ct4o/NZp24w2TUm0Vy9Elzua50KiQKeabLj83BLOjPPnVLCeBMnE5W9QCVtyzuVRvxms071mecDmJ1al1t0bnWtZypQDwUYzCP1ettEepY5o/NhYbncoDG3MIEP8pp++28AaZd/f47DFMTNcr4ZpmZkxAWJsYrzb0TcAAAA=');
+  background-size:cover; background-position:center 25%;
+  filter:blur(12px) brightness(.4);
+  transform:scale(1.08);
+  transition:opacity .6s ease;
+}
+.page-hero-img {
   width:100%; height:100%; object-fit:cover; object-position:center 25%;
   filter:brightness(.4);
+  opacity:0;
+  transition:opacity .6s ease;
+}
+.page-hero.hero-loaded .page-hero-img {
+  opacity:1;
+}
+.page-hero.hero-loaded .page-hero-lqip {
+  opacity:0;
 }
 .page-hero-fade {
   position:absolute; inset:0;
