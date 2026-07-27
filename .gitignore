@@ -1,7 +1,4 @@
 # Git ignore for BlackHorses
-# Ignore image and icon asset folders (photos, galleries, etc.)
-assets/images/
-assets/icons/
 
 # Common extras (optional)
 .DS_Store
