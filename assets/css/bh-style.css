@@ -132,11 +132,11 @@ body::before {
 
 /* ══════════════ PAGE HERO BANNER (subpages) ══════════════════ */
 .page-hero {
-  position:relative; height:clamp(200px,32vw,420px); overflow:hidden;
+  position:relative; height:clamp(340px,46vw,600px); overflow:hidden;
   margin-top:0;
 }
 .page-hero-lqip {
-  position:absolute; inset:0;
+  position:absolute; inset:0; z-index:0;
   background-image:url('data:image/webp;base64,UklGRlABAABXRUJQVlA4IEQBAACQBgCdASoeABQAPpE+mEilo6IhMBgIALASCWMAsR7p1gCuYUzPt+ZH1bsiNo/sOAQYP8dg9SIZTWo+rlzAAP7y1WnN6BPp2oXWvlDkFtfwhtcq59nQllUwrnxCMMnJu5FYWZq9gO+pgfWkMShwzqO26fZvXE8/lC60UAkuxQxMD5K8jbyLpuvS4maIEq55QI7lBJWBiazDSp6SwRtVePQnK7xms9AnQ94TfgJaGGotwzIR1fMvYxTcl4Kt4rReJNzLOxblY4f1Ct4o/NZp24w2TUm0Vy9Elzua50KiQKeabLj83BLOjPPnVLCeBMnE5W9QCVtyzuVRvxms071mecDmJ1al1t0bnWtZypQDwUYzCP1ettEepY5o/NhYbncoDG3MIEP8pp++28AaZd/f47DFMTNcr4ZpmZkxAWJsYrzb0TcAAAA=');
   background-size:cover; background-position:center 25%;
   filter:blur(12px) brightness(.4);
@@ -144,23 +144,37 @@ body::before {
   transition:opacity .6s ease;
 }
 .page-hero-img {
+  position:absolute; inset:0; z-index:0;
   width:100%; height:100%; object-fit:cover; object-position:center 25%;
   filter:brightness(.4);
   opacity:0;
+  transform:scale(1.06);
   transition:opacity .6s ease;
 }
 .page-hero.hero-loaded .page-hero-img {
   opacity:1;
+  animation:heroZoom 10s ease-out forwards;
 }
 .page-hero.hero-loaded .page-hero-lqip {
   opacity:0;
 }
+@keyframes heroZoom { to { transform:scale(1); } }
+.page-hero::before {
+  content:''; position:absolute; inset:0; z-index:1;
+  background:radial-gradient(ellipse at 50% 35%, transparent 30%, rgba(0,0,0,.6) 100%);
+  pointer-events:none;
+}
 .page-hero-fade {
-  position:absolute; inset:0;
-  background:linear-gradient(to bottom, rgba(14,14,14,0.2), #0e0e0e);
+  position:absolute; inset:0; z-index:1;
+  background:linear-gradient(to bottom, rgba(14,14,14,0.1) 0%, rgba(14,14,14,0.05) 45%, #0e0e0e 100%);
 }
 .page-hero-content {
-  position:absolute; bottom:clamp(24px,5vw,60px); left:clamp(20px,5vw,80px);
+  position:absolute; z-index:2;
+  bottom:clamp(32px,6vw,72px); left:clamp(20px,5vw,80px);
+  opacity:0;
+}
+.page-hero.hero-loaded .page-hero-content {
+  animation:fadeUp .8s ease .15s both;
 }
 .page-eyebrow {
   font-family:'Inter',sans-serif; font-size:11px; color:var(--accent);
@@ -168,8 +182,8 @@ body::before {
 }
 .page-title {
   font-family:'BHBrand',sans-serif;
-  font-size:clamp(48px,8vw,100px);
-  color:#fff; line-height:.9;
+  font-size:clamp(56px,9.5vw,140px);
+  color:#fff; line-height:.88; letter-spacing:-.01em;
 }
 
 /* ══════════════ SECTION HEADERS ══════════════════════════════ */
