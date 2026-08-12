@@ -16,8 +16,6 @@
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:3px;
-  max-width:1000px;
-  margin:0;
 }
 .historia-block {
   background:#111; border:1px solid var(--border);
@@ -81,7 +79,6 @@
 #fundadores-section .header { margin-bottom:clamp(32px,4vw,52px); }
 
 .fundador-block {
-  max-width:1000px;
   margin:0 0 clamp(56px,7vw,96px);
 }
 .fundador-block::after { content:''; display:block; clear:both; }
