@@ -70,6 +70,20 @@ function bhInitReveal() {
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 }
 
+/* ── Mini carrossel (fotos secundárias dos fundadores) ────────── */
+function bhInitMiniCarousel() {
+  document.querySelectorAll('[data-carousel]').forEach(carousel => {
+    const imgs = carousel.querySelectorAll('img');
+    if (imgs.length < 2) return;
+    let i = 0;
+    setInterval(() => {
+      imgs[i].classList.remove('active');
+      i = (i + 1) % imgs.length;
+      imgs[i].classList.add('active');
+    }, 3000);
+  });
+}
+
 /* ── Active nav link ────────────────────────────────────────── */
 function bhInitActiveNav() {
   const page = window.location.pathname.split('/').pop() || 'index.html';
@@ -85,5 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
   bhInitNav();
   bhInitHamburger();
   bhInitReveal();
+  bhInitMiniCarousel();
   bhInitActiveNav();
 });
