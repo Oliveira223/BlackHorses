@@ -156,11 +156,12 @@
   float:right;
   width:min(240px,30%);
   aspect-ratio:3/4;
-  margin:0 0 20px 28px;
+  margin:8px 0 0 28px;
 }
 .fundador-block.reverse .fundador-mini-carousel.inline {
   float:left;
-  margin:0 28px 20px 0;
+  aspect-ratio:0.64;
+  margin:8px 28px 0 0;
 }
 
 /* ── Modalidades chips ───────────────────────────────────── */
